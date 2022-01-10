@@ -34,7 +34,7 @@ while True:
     success, img= cap.read()
     # Find Hand
     img = detector.findhands(img)
-    lmlist, bbox = detector.handPosition(img,draw=True)
+    lmlist = detector.handPosition(img,draw=True)
     if(len(lmlist) != 0):
         # print(lmlist[4], lmlist[8])
         area = (bbox[2]-bbox[0])*(bbox[3]-bbox[1])//100
